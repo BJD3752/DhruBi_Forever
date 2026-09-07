@@ -27,15 +27,18 @@
   --env-in:#d9ab8c;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{min-height:100%}
+html{height:100%}
 body{
   font-family:'Cormorant Garamond',Georgia,serif;
   color:var(--ink);
   background:
     radial-gradient(120% 80% at 50% -10%, #fff6ea 0%, var(--dawn) 26%, var(--blush) 58%, var(--sky) 100%);
-  min-height:100dvh;overflow-x:hidden;
-  display:flex;flex-direction:column;
+  min-height:100%;overflow-x:hidden;
+  display:flex;align-items:center;justify-content:center;
   padding:max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+}
+body.opened{
+  align-items:flex-start;
 }
 body::before{ /* watercolour bleed */
   content:'';position:fixed;inset:-15%;pointer-events:none;z-index:0;opacity:.55;
